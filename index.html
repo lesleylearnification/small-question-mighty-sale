@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Small Question. Mighty Sale.</title>
+<style>
+:root{--bg:#fff7ed;--panel:#fff;--soft:#fffaf5;--text:#2b2118;--muted:#77695d;--border:#ead8c7;--accent:#e85d04;--accent2:#b84300;--accentSoft:#ffedd5;--ok:#166534;--okSoft:#dcfce7;--bad:#991b1b;--badSoft:#fee2e2;--shadow:0 16px 40px rgba(78,45,21,.12)}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at top right,rgba(232,93,4,.12),transparent 30%),linear-gradient(180deg,#fffaf5 0%,var(--bg) 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button{font:inherit}.shell{width:min(940px,calc(100% - 30px));margin:30px auto}.hero{margin-bottom:18px}.series{margin:0 0 8px;color:var(--accent2);font-size:.82rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}h1,h2,h3,p{margin-top:0}h1{margin-bottom:8px;font-size:clamp(2.1rem,5vw,3.7rem);line-height:.98;letter-spacing:-.05em}.subtitle{margin:0;max-width:760px;color:var(--muted);font-size:1.07rem;line-height:1.55}.game{padding:24px;border:1px solid var(--border);border-radius:26px;background:rgba(255,255,255,.94);box-shadow:var(--shadow)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}.metric{padding:14px 16px;border:1px solid var(--border);border-radius:14px;background:var(--soft)}.metric-label{margin-bottom:4px;color:var(--muted);font-size:.8rem}.metric-value{font-size:1.3rem;font-weight:900}.progress-wrap{display:flex;align-items:center;gap:12px;margin-bottom:22px}.progress-track{height:10px;flex:1;overflow:hidden;border-radius:999px;background:var(--accentSoft)}.progress-bar{height:100%;width:20%;border-radius:inherit;background:var(--accent);transition:width .25s ease}.progress-text{min-width:40px;color:var(--muted);font-size:.88rem;text-align:right}.customer-card{padding:18px;margin-bottom:18px;border:1px solid var(--border);border-radius:16px;background:linear-gradient(180deg,#fff 0%,var(--soft) 100%)}.customer-label{display:inline-flex;margin-bottom:8px;padding:5px 10px;border-radius:999px;background:var(--accentSoft);color:var(--accent2);font-size:.76rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em}.customer-quote{margin:0;font-size:clamp(1.25rem,3vw,1.65rem);line-height:1.35;letter-spacing:-.02em}.prompt{margin-bottom:16px;font-weight:800}.answers{display:grid;gap:12px}.answer{width:100%;padding:15px 16px;border:1px solid var(--border);border-radius:14px;background:var(--panel);color:var(--text);text-align:left;line-height:1.48;cursor:pointer;transition:.12s}.answer:hover:not(:disabled){transform:translateY(-1px);border-color:var(--accent);background:#fffdf9}.answer:focus-visible,.primary:focus-visible{outline:3px solid rgba(232,93,4,.24);outline-offset:3px}.answer:disabled{cursor:default}.answer.correct{border-color:var(--ok);background:var(--okSoft)}.answer.selected-wrong{border-color:var(--bad);background:var(--badSoft)}.answer.dim{opacity:.62}.choice-letter{display:inline-block;width:1.8rem;color:var(--accent2);font-weight:900}.feedback{margin-top:16px;padding:17px 18px;border-left:5px solid var(--accent);border-radius:12px;background:var(--accentSoft);line-height:1.55}.feedback strong{display:block;margin-bottom:5px}.feedback small{display:block;margin-top:8px;color:var(--muted)}.primary{width:100%;margin-top:16px;padding:14px 18px;border:0;border-radius:14px;background:var(--accent);color:#fff;font-weight:900;cursor:pointer;transition:.12s}.primary:hover{transform:translateY(-1px);background:var(--accent2)}.hidden{display:none!important}.results{display:grid;gap:18px}.callout,.panel{padding:18px;border-radius:16px}.callout{border-left:5px solid var(--accent);background:var(--accentSoft)}.results-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.panel{border:1px solid var(--border);background:var(--soft)}.panel-label{margin-bottom:5px;color:var(--muted);font-size:.82rem}.panel-value{font-size:1.25rem;font-weight:900}.notes{margin:10px 0 0;padding-left:22px}.notes li{margin:8px 0;line-height:1.5}.prototype-note{margin-bottom:0;color:var(--muted);font-size:.9rem;line-height:1.5}footer{margin-top:16px;color:var(--muted);font-size:.82rem;text-align:center}@media(max-width:640px){.shell{width:min(100% - 18px,940px);margin:16px auto}.game{padding:18px}.metrics,.results-grid{grid-template-columns:1fr}.metric{display:flex;justify-content:space-between;align-items:center}.metric-label{margin-bottom:0}}
+</style>
+</head>
+<body>
+<main class="shell">
+<header class="hero">
+<p class="series">Tiny Games, Huge Wins · Game 2 of 5</p>
+<h1>Small Question. Mighty Sale.</h1>
+<p class="subtitle">Ask the question that uncovers the real need—before you recommend the premium package, the deluxe package, or whatever package has the shiniest brochure.</p>
+</header>
+
+<section class="game" aria-labelledby="questionTitle">
+<div class="metrics">
+<div class="metric"><div class="metric-label">Customer</div><div id="roundMetric" class="metric-value">1 / 5</div></div>
+<div class="metric"><div class="metric-label">Discovery points</div><div id="scoreMetric" class="metric-value">0</div></div>
+<div class="metric"><div class="metric-label">Curiosity streak</div><div id="streakMetric" class="metric-value">0</div></div>
+</div>
+
+<div class="progress-wrap">
+<div class="progress-track" aria-hidden="true"><div id="progressBar" class="progress-bar"></div></div>
+<span id="progressText" class="progress-text">20%</span>
+</div>
+
+<article id="gamePanel">
+<div class="customer-card">
+<span class="customer-label">Consultative selling</span>
+<p id="customerQuote" class="customer-quote"></p>
+</div>
+<h2 id="questionTitle" class="prompt">What do you ask first?</h2>
+<div id="answerList" class="answers"></div>
+<div id="feedback" class="feedback hidden" aria-live="polite"></div>
+<button id="nextButton" class="primary hidden" type="button">Send in the next delightfully vague customer</button>
+</article>
+
+<section id="resultsPanel" class="results hidden" aria-live="polite">
+<div class="callout"><h2>Your Sales Question DNA</h2><p id="resultHeadline"></p></div>
+<div class="results-grid">
+<div class="panel"><div class="panel-label">Final score</div><div id="finalScore" class="panel-value">0 / 500</div></div>
+<div class="panel"><div class="panel-label">Discovery profile</div><div id="profileName" class="panel-value"></div></div>
+</div>
+<div><h3>What your questions suggest</h3><ul id="profileNotes" class="notes"></ul></div>
+<div class="panel"><h3>Manager coaching snapshot</h3><p id="coachNote"></p><p class="prototype-note">In a full version, repeated play would track whether the seller tends to diagnose needs, chase features, jump to price, or conduct an enthusiastic interrogation nobody requested.</p></div>
+<button id="restartButton" class="primary" type="button">Replay and ask less suspicious questions</button>
+</section>
+</section>
+
+<footer>Fictional customers. Real sales habits. Zero mandatory role-play in front of thirty coworkers.</footer>
+</main>
+
+<script>
+const scenarios=[
+{quote:'“I need something that’ll make working from home easier.”',answers:[
+{text:'What part of working from home feels hardest right now?',points:100,trait:'diagnose',feedback:'You found the plot twist. Customers rarely buy products; they buy relief from whatever keeps ruining Tuesday.'},
+{text:'What kind of work are you usually doing from home?',points:75,trait:'context',feedback:'Useful question. You learned the setting, but not yet the pain point. This is the trailer, not the movie.'},
+{text:'What are you using at home for this right now?',points:65,trait:'current',feedback:'Reasonable. But you reached for the current setup before learning why the current setup deserves to be replaced.'},
+{text:'What price range were you hoping to stay within?',points:45,trait:'budget',feedback:'Ah yes, money first. Bold. It is the sales equivalent of asking someone’s credit score before learning their name.'}]},
+{quote:'“Our team wastes hours every week trying to stay organized.”',answers:[
+{text:'What happens when something important falls through the cracks?',points:100,trait:'diagnose',feedback:'Boom. Before prescribing medicine, you figured out where it hurts. Extremely rude to the feature brochure, but excellent selling.'},
+{text:'What tools are you currently using to organize the work?',points:70,trait:'current',feedback:'Helpful, but slightly early. You opened the toolbox before finding out which part of the house is on fire.'},
+{text:'How many people are usually involved in each project?',points:60,trait:'context',feedback:'Good background detail. Unfortunately, headcount does not tell you whether the problem is confusion, delay, duplication, or Brenda.'},
+{text:'Who is normally responsible for keeping projects on track?',points:50,trait:'process',feedback:'A fair question, but now the conversation sounds suspiciously like an audit. Save the org-chart archaeology for later.'}]},
+{quote:'“We’re growing really fast, and everything feels messy.”',answers:[
+{text:'What has become harder because the company is growing?',points:100,trait:'diagnose',feedback:'Exactly. Growth is not the pain point. The chaos growth drags behind it like a suitcase with one broken wheel is the pain point.'},
+{text:'What kind of growth are you seeing across the company?',points:75,trait:'context',feedback:'Good zoom-out question. Still, “growth” could mean customers, staff, locations, or one heroic spreadsheet gaining forty tabs.'},
+{text:'What systems are you using to manage the growth today?',points:65,trait:'current',feedback:'Useful soon. But you asked about the plumbing before learning which room is flooding.'},
+{text:'How many employees do you expect to add this year?',points:50,trait:'numbers',feedback:'Specific and sensible. Also very capable of producing a beautifully precise answer to the wrong question.'}]},
+{quote:'“Our employees aren’t using the training we built.”',answers:[
+{text:'What does “not using it” actually look like in practice?',points:100,trait:'diagnose',feedback:'Correct. “Nobody uses it” can mean five different disasters wearing the same trench coat. Nice job refusing to read minds.'},
+{text:'What topics does the training currently cover for employees?',points:60,trait:'content',feedback:'Relevant, but not first. You started inventorying the furniture before confirming whether anyone can find the front door.'},
+{text:'How long does each course usually take to complete?',points:70,trait:'friction',feedback:'A good hypothesis. But course length is only one possible villain, and this mystery has a suspiciously large cast.'},
+{text:'How often do you update the training for employees?',points:50,trait:'process',feedback:'Not a bad question. Just not the one that tells you whether people cannot access it, hate it, ignore it, or forgot it exists.'}]},
+{quote:'“We’re thinking about switching to a different vendor.”',answers:[
+{text:'What happened that made you start looking at alternatives?',points:100,trait:'diagnose',feedback:'Congratulations. You resisted the urge to perform an unsolicited product demo. Somewhere, a customer quietly unclenched.'},
+{text:'What features would matter most in a different solution?',points:70,trait:'features',feedback:'Useful eventually. But features are answers, and you have not yet identified the question.'},
+{text:'When does your current vendor agreement come up for renewal?',points:60,trait:'timing',feedback:'Good timing intel. Still, a calendar does not explain whether the customer is fleeing price, service, performance, or emotional damage.'},
+{text:'Who else would need to approve a change in vendors?',points:50,trait:'decision',feedback:'Practical, but premature. You found the committee before finding the problem. Very corporate. Slightly haunted.'}]}
+];
+
+let current=0,score=0,streak=0,answered=false;const traits={};
+const roundMetric=document.getElementById('roundMetric'),scoreMetric=document.getElementById('scoreMetric'),streakMetric=document.getElementById('streakMetric'),progressBar=document.getElementById('progressBar'),progressText=document.getElementById('progressText'),customerQuote=document.getElementById('customerQuote'),answerList=document.getElementById('answerList'),feedback=document.getElementById('feedback'),nextButton=document.getElementById('nextButton'),gamePanel=document.getElementById('gamePanel'),resultsPanel=document.getElementById('resultsPanel');
+
+function renderScenario(){
+answered=false;feedback.classList.add('hidden');nextButton.classList.add('hidden');
+const item=scenarios[current];roundMetric.textContent=`${current+1} / ${scenarios.length}`;scoreMetric.textContent=score;streakMetric.textContent=streak;
+const pct=Math.round(((current+1)/scenarios.length)*100);progressBar.style.width=`${pct}%`;progressText.textContent=`${pct}%`;customerQuote.textContent=item.quote;answerList.innerHTML='';
+item.answers.forEach((answer,index)=>{const button=document.createElement('button');button.type='button';button.className='answer';button.innerHTML=`<span class="choice-letter">${String.fromCharCode(65+index)}.</span>${answer.text}`;button.addEventListener('click',()=>chooseAnswer(index));answerList.appendChild(button);});
+}
+function chooseAnswer(index){
+if(answered)return;answered=true;const item=scenarios[current],chosen=item.answers[index];score+=chosen.points;streak=chosen.points===100?streak+1:0;traits[chosen.trait]=(traits[chosen.trait]||0)+1;
+[...answerList.children].forEach((button,i)=>{button.disabled=true;button.classList.add('dim');if(item.answers[i].points===100){button.classList.remove('dim');button.classList.add('correct')}if(i===index&&chosen.points<100){button.classList.remove('dim');button.classList.add('selected-wrong')}});
+let label='Good question. Tiny problem.';if(chosen.points===100)label='Mighty question.';else if(chosen.points>=70)label='Very close. The sale still has a pulse.';else if(chosen.points>=60)label='Plausible. Slightly premature.';else label='You asked a question. It was simply not the question.';
+feedback.innerHTML=`<strong>${label}</strong><span>${chosen.feedback}</span><small>+${chosen.points} discovery points</small>`;feedback.classList.remove('hidden');scoreMetric.textContent=score;streakMetric.textContent=streak;nextButton.textContent=current===scenarios.length-1?'Reveal my Sales Question DNA':'Send in the next delightfully vague customer';nextButton.classList.remove('hidden');
+}
+function finishGame(){
+gamePanel.classList.add('hidden');resultsPanel.classList.remove('hidden');document.getElementById('finalScore').textContent=`${score} / 500`;
+let profile='',headline='',notes=[],coach='';
+if(score>=450){profile='The Curious Consultant';headline='You diagnose before you prescribe. Customers everywhere are relieved.';notes=['You look for the problem underneath the first thing the customer says.','You resist the urge to lead with features, pricing, or the sacred product deck.','Your questions make the customer feel understood instead of processed.'];coach='Ready for harder scenarios involving multiple stakeholders, conflicting needs, and customers who insist everything is “fine” while describing active chaos.'}
+else if(score>=360){profile='The Promising Problem-Finder';headline='Strong curiosity, with only occasional premature brochure energy.';notes=['You usually ask useful questions that move the conversation forward.','Your next step is separating good questions from the best first question.','Practice uncovering impact before exploring tools, features, or price.'];coach='Use branching scenarios that reveal how different first questions produce different customer information and sales outcomes.'}
+else if((traits.features||0)+(traits.current||0)>=2){profile='The Feature Firehose';headline='You are deeply ready to discuss the product, whether or not the customer is.';notes=['You gather product and solution details quickly.','You may be deciding what to sell before understanding what needs fixing.','Pause long enough to uncover pain, consequence, and desired change.'];coach='Focus coaching on diagnostic sequencing: problem first, impact second, solution third, glorious feature avalanche later.'}
+else if((traits.budget||0)+(traits.numbers||0)+(traits.timing||0)>=2){profile='The Spreadsheet Detective';headline='You collect facts beautifully. The emotional plot remains missing.';notes=['You are comfortable asking specific, practical questions.','You may prioritize measurable details before understanding the human problem.','Use one broad diagnostic question before narrowing into numbers and logistics.'];coach='Practice turning customer statements into open questions about friction, consequence, urgency, and desired outcomes.'}
+else{profile='The Question Collector';headline='Excellent curiosity. Now choose the question that unlocks the next useful clue.';notes=['You ask reasonable questions and avoid hard-selling too early.','You sometimes gather background information before identifying the core problem.','The best first question usually reveals pain, consequence, or desired change.'];coach='Compare several plausible questions and discuss what each one reveals, misses, or accidentally postpones.'}
+document.getElementById('profileName').textContent=profile;document.getElementById('resultHeadline').textContent=headline;document.getElementById('profileNotes').innerHTML=notes.map(n=>`<li>${n}</li>`).join('');document.getElementById('coachNote').textContent=coach;window.scrollTo({top:0,behavior:'smooth'});
+}
+nextButton.addEventListener('click',()=>{if(current<scenarios.length-1){current++;renderScenario()}else finishGame()});
+document.getElementById('restartButton').addEventListener('click',()=>{current=0;score=0;streak=0;answered=false;Object.keys(traits).forEach(k=>delete traits[k]);resultsPanel.classList.add('hidden');gamePanel.classList.remove('hidden');renderScenario();window.scrollTo({top:0,behavior:'smooth'})});
+renderScenario();
+</script>
+</body>
+</html>
